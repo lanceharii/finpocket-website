@@ -1,0 +1,99 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-16T09:52:52.685Z",
+  "summary": "Core page routing and layout for a FinPocket marketing site were added (Home/Features/About/Privacy/FAQ), including a header nav, footer, and a per-page SEO helper. However, several requirements are not met exactly (notably footer copyright/email placeholder and exact Home/Privacy copy requirements), and multiple unrequested features were introduced (caffeine.ai attribution/UTM, real contact email, and backend/auth-related code).",
+  "missing_requirements": [
+    {
+      "id": "REQ-2",
+      "requirement": "Home page sections must use the exact provided user-facing copy (including Why FinPocket bullets, etc.).",
+      "reason": "The “Why FinPocket” content is not rendered as the exact bullet strings required (e.g., required: “100% Private (No login, no cloud)”; implemented as title “100% Private” with separate description “No login, no cloud”). Also, the HomePage file is truncated in the diff, so the remaining sections’ exact copy/order cannot be fully verified from the provided evidence.",
+      "evidence": [
+        "frontend/src/pages/HomePage.tsx (truncated)"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Privacy Policy page must display all five bullet points exactly as provided.",
+      "reason": "One bullet differs from the required text: implemented as \"All data stored locally on the user's device\" (straight apostrophe) instead of “All data stored locally on the user’s device” (curly apostrophe), which violates the “exactly as provided” requirement.",
+      "evidence": [
+        "frontend/src/pages/PrivacyPolicyPage.tsx"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "requirement": "Footer must include the exact copyright text “© 2026 FinPocket” and a contact email placeholder (not a real email unless provided).",
+      "reason": "Footer uses a dynamic year (\"© {currentYear} FinPocket\") rather than the exact string “© 2026 FinPocket”, and it includes a real email address (mailto:contact@finpocket.app) rather than a placeholder.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "Add generated image assets under frontend/public/assets/generated (mockup + 5 icons) and reference them from the frontend.",
+      "reason": "Frontend code references the generated assets paths, but the diff summary does not show the required image files being added under frontend/public/assets/generated. One added file is omitted due to limits, but it is not enough evidence to confirm all required assets exist in the specified directory.",
+      "evidence": [
+        "frontend/src/pages/HomePage.tsx (truncated)",
+        "frontend/src/pages/FeaturesPage.tsx",
+        "File diff summary: \"Omitted files due to limits: added=1\""
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Caffeine.ai attribution link in the footer with UTM tracking parameters and a 'Built with' line.",
+      "reason": "Not requested; also conflicts with non-goals around tracking/analytics-like behavior (UTM parameters).",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Use of a real contact email address (contact@finpocket.app) instead of a placeholder.",
+      "reason": "REQ-7 explicitly asks for a contact email placeholder, not a real email unless provided by the user.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/pages/FaqPage.tsx"
+      ]
+    },
+    {
+      "description": "Added backend Motoko actor file (backend/main.mo) even though backend changes were 'not expected' and only to be introduced if strictly necessary for a marketing site.",
+      "reason": "Marketing site requirements are frontend-only; no backend functionality is described as needed.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Introduced/added authentication and actor hooks wiring (Internet Identity provider usage and useActor/useInternetIdentity files).",
+      "reason": "User explicitly listed non-goals including logins/user accounts, and the marketing site requirements do not require authentication.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useInternetIdentity.ts (truncated)"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeaderNav.tsx",
+    "frontend/src/components/Seo.tsx",
+    "frontend/src/components/SiteLayout.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AboutPage.tsx",
+    "frontend/src/pages/FaqPage.tsx",
+    "frontend/src/pages/FeaturesPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/PrivacyPolicyPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "FinPocket responsive marketing website (landing + supporting pages)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a mobile-first marketing site with routes/pages: Home, Features, About, Privacy Policy, and FAQ.",
+      "acceptanceCriteria": [
+        "Navigating to each page route renders the correct page content: Home, Features, About, Privacy Policy, FAQ.",
+        "Navigation works on mobile and desktop (no broken links, no missing routes).",
+        "Layout is responsive and readable on small screens first, and scales cleanly to desktop widths."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the top-level app router and page wiring for the five required routes (Home, Features, About, Privacy Policy, FAQ), ensuring navigation is not orphaned and all routes render."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout wrapper used by all routes to provide consistent header/nav, main container, and site-wide footer placement."
+        },
+        {
+          "path": "frontend/src/components/HeaderNav.tsx",
+          "operation": "create",
+          "description": "Create a mobile-first responsive header navigation (collapsible on small screens) with internal links to Home, Features, About, Privacy, and FAQ."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the Home page route component and ensure it is registered and reachable from the router."
+        },
+        {
+          "path": "frontend/src/pages/FeaturesPage.tsx",
+          "operation": "create",
+          "description": "Create the Features page route component and ensure it is registered and reachable from the router."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Create the About page route component and ensure it is registered and reachable from the router."
+        },
+        {
+          "path": "frontend/src/pages/PrivacyPolicyPage.tsx",
+          "operation": "create",
+          "description": "Create the Privacy Policy page route component and ensure it is registered and reachable from the router."
+        },
+        {
+          "path": "frontend/src/pages/FaqPage.tsx",
+          "operation": "create",
+          "description": "Create the FAQ page route component and ensure it is registered and reachable from the router."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build the Home page landing sections with the exact provided copy, including a disabled 'Coming Soon' CTA and a hero mockup image.",
+      "acceptanceCriteria": [
+        "Home page contains all 7 sections in the specified order.",
+        "All listed text matches exactly (punctuation and capitalization preserved).",
+        "Hero section displays an app mockup placeholder image alongside the hero copy on desktop and stacks appropriately on mobile.",
+        "CTA button is visibly disabled or non-navigating and clearly indicates “Coming Soon” (no broken external links)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Implement the 7 Home page sections in the specified order with exact user-facing copy, including a clearly disabled/non-navigating CTA labeled “Download (Coming Soon)” and rendering the hero mockup image from frontend/public/assets/generated/finpocket-mockup.dim_1200x900.png."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create a Features page with consistent icons and short descriptions for the five core features.",
+      "acceptanceCriteria": [
+        "Features page includes one icon + short description block for each of the 5 core features listed by the user.",
+        "Icons are consistent in style and sized consistently across feature items.",
+        "Page remains mobile-first and uses a clean grid/list layout that adapts to desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/FeaturesPage.tsx",
+          "operation": "modify",
+          "description": "Implement a mobile-first feature list/grid with one icon + short description block for each core feature, using generated icons: frontend/public/assets/generated/icon-quick-entry.dim_256x256.png, frontend/public/assets/generated/icon-categories.dim_256x256.png, frontend/public/assets/generated/icon-dashboard.dim_256x256.png, frontend/public/assets/generated/icon-local-storage.dim_256x256.png, frontend/public/assets/generated/icon-walkthrough.dim_256x256.png; ensure consistent sizing and styling across items."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create the About page with the provided mission/positioning copy and consistent site chrome.",
+      "acceptanceCriteria": [
+        "About page renders the provided copy verbatim in a readable, professional layout.",
+        "Page includes consistent header/nav and footer shared with the rest of the site."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Render the About page copy verbatim in a professional layout, ensuring it is wrapped by the shared SiteLayout so header/nav and footer match the rest of the site."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Ensure SiteLayout is used consistently across all pages so About (and others) share the same header/nav and footer."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create a Privacy Policy page showing the five provided policy statements clearly.",
+      "acceptanceCriteria": [
+        "Privacy Policy page displays all five bullet points exactly as provided.",
+        "Page is readable on mobile and uses consistent typography with the rest of the site."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PrivacyPolicyPage.tsx",
+          "operation": "modify",
+          "description": "Implement the Privacy Policy page with the five bullet points exactly as provided, using consistent typography and spacing with the site’s global styles."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create an FAQ page with the provided five Q&A items in a scannable, accessible format.",
+      "acceptanceCriteria": [
+        "FAQ page contains all five FAQ items with the exact question/answer text.",
+        "FAQ items are formatted for easy scanning (e.g., accordion or clearly separated sections) while remaining accessible on mobile."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/FaqPage.tsx",
+          "operation": "modify",
+          "description": "Implement the five FAQ items with exact question/answer text using an accessible, mobile-friendly format (e.g., semantic details/summary accordion or clearly separated sections) for easy scanning."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add a site-wide footer with required links, copyright text, and a contact email placeholder.",
+      "acceptanceCriteria": [
+        "Footer is visible on all pages and contains working internal links to the 5 pages.",
+        "Footer includes the exact copyright string “© 2026 FinPocket”.",
+        "Footer includes a visible contact email placeholder (not a real email unless provided by the user)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create a site-wide footer component containing internal links to Home, Features, About, Privacy, and FAQ; the exact copyright string “© 2026 FinPocket”; and a visible contact email placeholder."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Render the Footer component from SiteLayout so it appears on every page/route."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Apply a clean, minimal, modern visual design system (soft blue/green/white) with mobile-first responsiveness and fast loading.",
+      "acceptanceCriteria": [
+        "Site uses a consistent visual system (colors, spacing, typography) aligned with a soft blue/green/white palette.",
+        "All pages meet basic performance expectations (no unnecessary heavy assets; images optimized).",
+        "Typography is clean and readable across mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add global Tailwind directives and define a soft blue/green/white theme via CSS variables and baseline typography rules, ensuring consistent spacing/typography across all pages."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Apply shared layout structure (max widths, padding, section spacing) to maintain a clean, modern, startup-style look that is mobile-first and scales to desktop."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Ensure the Home page sections use lightweight structure and responsive layout patterns; reference the hero image in a performance-conscious way (avoid oversized rendering; rely on the provided generated asset)."
+        },
+        {
+          "path": "frontend/src/pages/FeaturesPage.tsx",
+          "operation": "modify",
+          "description": "Ensure feature icons are rendered efficiently (consistent size, appropriate loading behavior) and the layout remains clean and responsive to support fast loading."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Improve SEO via semantic HTML, per-page document titles, and per-page meta descriptions.",
+      "acceptanceCriteria": [
+        "Each page sets a distinct, relevant document title (e.g., “FinPocket — Privacy Policy”).",
+        "Each page includes a meta description relevant to its content.",
+        "Pages use semantic headings (H1 present and meaningful; sections structured logically)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add a baseline meta description tag in the HTML head that can be updated at runtime per route, and keep the HTML structure semantic (lang, charset, viewport already present)."
+        },
+        {
+          "path": "frontend/src/components/Seo.tsx",
+          "operation": "create",
+          "description": "Create a lightweight SEO helper component that sets document.title and updates/creates the meta description tag based on provided props for each page."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Use the shared Seo helper to set a relevant title and meta description for the Home page; ensure semantic structure with a single meaningful H1 and logically grouped sections."
+        },
+        {
+          "path": "frontend/src/pages/FeaturesPage.tsx",
+          "operation": "modify",
+          "description": "Use the shared Seo helper to set a relevant title and meta description for the Features page; ensure semantic headings and section structure."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Use the shared Seo helper to set a relevant title and meta description for the About page; ensure semantic headings."
+        },
+        {
+          "path": "frontend/src/pages/PrivacyPolicyPage.tsx",
+          "operation": "modify",
+          "description": "Use the shared Seo helper to set a relevant title and meta description for the Privacy Policy page (e.g., “FinPocket — Privacy Policy”); ensure semantic headings."
+        },
+        {
+          "path": "frontend/src/pages/FaqPage.tsx",
+          "operation": "modify",
+          "description": "Use the shared Seo helper to set a relevant title and meta description for the FAQ page; ensure semantic headings and accessible Q&A structure."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add required generated static images to the frontend and render them in the Home hero and Features list.",
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced directly by the frontend (not served through the backend).",
+        "Home hero displays the generated app mockup image.",
+        "Features page uses the generated icon set for the feature list with consistent sizing and styling."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/finpocket-mockup.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated hero mockup asset at the exact required path so it can be referenced directly by the frontend UI."
+        },
+        {
+          "path": "frontend/public/assets/generated/icon-quick-entry.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated feature icon asset at the exact required path so it can be referenced directly by the frontend UI."
+        },
+        {
+          "path": "frontend/public/assets/generated/icon-categories.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated feature icon asset at the exact required path so it can be referenced directly by the frontend UI."
+        },
+        {
+          "path": "frontend/public/assets/generated/icon-dashboard.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated feature icon asset at the exact required path so it can be referenced directly by the frontend UI."
+        },
+        {
+          "path": "frontend/public/assets/generated/icon-local-storage.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated feature icon asset at the exact required path so it can be referenced directly by the frontend UI."
+        },
+        {
+          "path": "frontend/public/assets/generated/icon-walkthrough.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated feature icon asset at the exact required path so it can be referenced directly by the frontend UI."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Reference and render the generated mockup image from frontend/public/assets/generated/finpocket-mockup.dim_1200x900.png in the hero section (as required) and ensure responsive behavior on mobile vs desktop."
+        },
+        {
+          "path": "frontend/src/pages/FeaturesPage.tsx",
+          "operation": "modify",
+          "description": "Reference and render the generated feature icons from frontend/public/assets/generated/icon-quick-entry.dim_256x256.png, icon-categories.dim_256x256.png, icon-dashboard.dim_256x256.png, icon-local-storage.dim_256x256.png, icon-walkthrough.dim_256x256.png with consistent sizing and alignment."
+        }
+      ]
+    }
+  ]
+}

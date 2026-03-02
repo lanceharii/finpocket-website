@@ -1,0 +1,204 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-a-mobile-first-responsive-marketing-website-for-the-finpocket-mobile-application-with-the-following-pages-and-routes-home-features-about-privacy-policy-and-faq",
+      "featureTitle": "Implement a mobile-first, responsive marketing website for the FinPocket mobile application with the following pages and routes: Home, Features, About, Privacy Policy, and FAQ.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HeaderNav.tsx",
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/FaqPage.tsx",
+        "frontend/src/pages/FeaturesPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/PrivacyPolicyPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-home-page-as-an-app-landing-page-with-these-sections-and-exact-user-facing-copy-1-hero-title-finpocket-your-money-your-device-your-privacy-subtitle-track-your-income-and-expenses-easily-with-a-fast-offline-and-secure-personal-finance-app-cta-button-labeled-download-coming-soon-include-an-app-mockup-placeholder-image-2-why-finpocket-bullets-100-private-no-login-no-cloud-works-offline-fast-and-simple-no-ads-no-tracking-3-core-features-bullets-quick-income-and-expense-entry-custom-categories-monthly-dashboard-and-summaries-local-device-storage-first-time-guided-walkthrough-4-how-it-works-steps-step-1-install-the-app-step-2-add-your-income-and-expenses-step-3-view-insights-and-manage-your-money-5-privacy-highlight-your-financial-data-never-leaves-your-device-6-future-features-bullets-budget-planning-backup-and-restore-export-reports-app-lock-pin-protection-7-call-to-action-download-finpocket-coming-soon",
+      "featureTitle": "Build the Home page as an app landing page with these sections and exact user-facing copy: (1) Hero: Title “FinPocket – Your Money. Your Device. Your Privacy.”; Subtitle “Track your income and expenses easily with a fast, offline, and secure personal finance app.”; CTA button labeled “Download (Coming Soon)”; include an app mockup placeholder image. (2) Why FinPocket bullets: “100% Private (No login, no cloud)”, “Works Offline”, “Fast and Simple”, “No Ads, No Tracking”. (3) Core Features bullets: “Quick income and expense entry”, “Custom categories”, “Monthly dashboard and summaries”, “Local device storage”, “First-time guided walkthrough”. (4) How It Works steps: “Step 1: Install the app”, “Step 2: Add your income and expenses”, “Step 3: View insights and manage your money”. (5) Privacy Highlight: “Your financial data never leaves your device.” (6) Future Features bullets: “Budget planning”, “Backup and restore”, “Export reports”, “App lock / PIN protection”. (7) Call to Action: “Download FinPocket – Coming Soon”.",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-features-page-that-explains-all-core-features-in-detail-using-simple-icons-and-short-descriptions-for-each-feature-quick-income-and-expense-entry-custom-categories-monthly-dashboard-and-summaries-local-device-storage-first-time-guided-walkthrough",
+      "featureTitle": "Create the Features page that explains all core features in detail using simple icons and short descriptions for each feature: Quick income and expense entry, Custom categories, Monthly dashboard and summaries, Local device storage, First-time guided walkthrough.",
+      "files": [
+        "frontend/src/pages/FeaturesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-about-page-with-the-provided-positioning-and-mission-copy-finpocket-was-built-to-provide-a-simple-secure-and-private-way-to-manage-personal-finances-the-mission-is-to-give-users-full-control-of-their-financial-data-without-complexity-or-tracking",
+      "featureTitle": "Create the About page with the provided positioning and mission copy: “FinPocket was built to provide a simple, secure, and private way to manage personal finances. The mission is to give users full control of their financial data without complexity or tracking.”",
+      "files": [
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/pages/AboutPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-privacy-policy-page-listing-these-statements-clearly-no-data-collection-no-account-required-no-cloud-storage-all-data-stored-locally-on-the-user-s-device-no-third-party-sharing",
+      "featureTitle": "Create the Privacy Policy page listing these statements clearly: No data collection; No account required; No cloud storage; All data stored locally on the user’s device; No third-party sharing.",
+      "files": [
+        "frontend/src/pages/PrivacyPolicyPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-faq-page-with-the-provided-q-a-items-do-i-need-an-account-no-does-it-work-offline-yes-is-my-data-safe-yes-stored-locally-is-the-app-free-yes-basic-features-are-free-are-there-ads-no",
+      "featureTitle": "Create the FAQ page with the provided Q&A items: “Do I need an account? No.”, “Does it work offline? Yes.”, “Is my data safe? Yes, stored locally.”, “Is the app free? Yes, basic features are free.”, “Are there ads? No.”",
+      "files": [
+        "frontend/src/pages/FaqPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-site-wide-footer-that-appears-on-every-page-with-links-to-home-features-about-privacy-and-faq-include-copyright-text-2026-finpocket-and-include-a-contact-email-placeholder",
+      "featureTitle": "Add a site-wide footer that appears on every page with links to Home, Features, About, Privacy, and FAQ; include copyright text “© 2026 FinPocket”; and include a contact email placeholder.",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/SiteLayout.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-the-requested-website-style-across-all-pages-clean-minimal-modern-professional-startup-style-layout-mobile-first-responsive-design-soft-blue-green-white-color-theme-clean-modern-fonts-fast-loading",
+      "featureTitle": "Apply the requested website style across all pages: clean, minimal, modern, professional startup-style layout; mobile-first responsive design; soft blue/green/white color theme; clean, modern fonts; fast loading.",
+      "files": [
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/FeaturesPage.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-make-the-site-seo-friendly-by-using-semantic-html-structure-headers-sections-per-page-document-titles-and-appropriate-meta-descriptions-matching-each-page-s-content",
+      "featureTitle": "Make the site SEO-friendly by using semantic HTML structure (headers, sections), per-page document titles, and appropriate meta descriptions matching each page’s content.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/Seo.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/FaqPage.tsx",
+        "frontend/src/pages/FeaturesPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/PrivacyPolicyPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-required-static-image-assets-generated-to-the-frontend-and-render-them-in-the-ui-the-hero-app-mockup-placeholder-image-and-a-consistent-set-of-simple-feature-icons",
+      "featureTitle": "Add the required static image assets (generated) to the frontend and render them in the UI: the hero app mockup placeholder image and a consistent set of simple feature icons.",
+      "files": [
+        "frontend/src/pages/FeaturesPage.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

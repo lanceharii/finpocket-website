@@ -1,0 +1,216 @@
+{
+  "kind": "build_request",
+  "title": "FinPocket marketing website with landing page and supporting pages",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement a mobile-first, responsive marketing website for the FinPocket mobile application with the following pages and routes: Home, Features, About, Privacy Policy, and FAQ.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Pages Required:\nHome, Features, About, Privacy Policy, FAQ"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigating to each page route renders the correct page content: Home, Features, About, Privacy Policy, FAQ.",
+        "Navigation works on mobile and desktop (no broken links, no missing routes).",
+        "Layout is responsive and readable on small screens first, and scales cleanly to desktop widths."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build the Home page as an app landing page with these sections and exact user-facing copy: (1) Hero: Title “FinPocket – Your Money. Your Device. Your Privacy.”; Subtitle “Track your income and expenses easily with a fast, offline, and secure personal finance app.”; CTA button labeled “Download (Coming Soon)”; include an app mockup placeholder image. (2) Why FinPocket bullets: “100% Private (No login, no cloud)”, “Works Offline”, “Fast and Simple”, “No Ads, No Tracking”. (3) Core Features bullets: “Quick income and expense entry”, “Custom categories”, “Monthly dashboard and summaries”, “Local device storage”, “First-time guided walkthrough”. (4) How It Works steps: “Step 1: Install the app”, “Step 2: Add your income and expenses”, “Step 3: View insights and manage your money”. (5) Privacy Highlight: “Your financial data never leaves your device.” (6) Future Features bullets: “Budget planning”, “Backup and restore”, “Export reports”, “App lock / PIN protection”. (7) Call to Action: “Download FinPocket – Coming Soon”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Home Page Sections:\n\n1. Hero Section\nTitle: FinPocket – Your Money. Your Device. Your Privacy.\nSubtitle: Track your income and expenses easily with a fast, offline, and secure personal finance app.\nCTA Button: Download (Coming Soon)\n...\nAdditional Requirements:\n- App mockup placeholder image in hero section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page contains all 7 sections in the specified order.",
+        "All listed text matches exactly (punctuation and capitalization preserved).",
+        "Hero section displays an app mockup placeholder image alongside the hero copy on desktop and stacks appropriately on mobile.",
+        "CTA button is visibly disabled or non-navigating and clearly indicates “Coming Soon” (no broken external links)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create the Features page that explains all core features in detail using simple icons and short descriptions for each feature: Quick income and expense entry, Custom categories, Monthly dashboard and summaries, Local device storage, First-time guided walkthrough.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Features Page:\nExplain all core features in detail with simple icons and short descriptions."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Features page includes one icon + short description block for each of the 5 core features listed by the user.",
+        "Icons are consistent in style and sized consistently across feature items.",
+        "Page remains mobile-first and uses a clean grid/list layout that adapts to desktop."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create the About page with the provided positioning and mission copy: “FinPocket was built to provide a simple, secure, and private way to manage personal finances. The mission is to give users full control of their financial data without complexity or tracking.”",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "About Page:\nFinPocket was built to provide a simple, secure, and private way to manage personal finances. The mission is to give users full control of their financial data without complexity or tracking."
+        ]
+      },
+      "acceptanceCriteria": [
+        "About page renders the provided copy verbatim in a readable, professional layout.",
+        "Page includes consistent header/nav and footer shared with the rest of the site."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create the Privacy Policy page listing these statements clearly: No data collection; No account required; No cloud storage; All data stored locally on the user’s device; No third-party sharing.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Privacy Policy Page:\n- No data collection\n- No account required\n- No cloud storage\n- All data stored locally on the user’s device\n- No third-party sharing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Privacy Policy page displays all five bullet points exactly as provided.",
+        "Page is readable on mobile and uses consistent typography with the rest of the site."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create the FAQ page with the provided Q&A items: “Do I need an account? No.”, “Does it work offline? Yes.”, “Is my data safe? Yes, stored locally.”, “Is the app free? Yes, basic features are free.”, “Are there ads? No.”",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "FAQ Page:\n- Do I need an account? No.\n- Does it work offline? Yes.\n- Is my data safe? Yes, stored locally.\n- Is the app free? Yes, basic features are free.\n- Are there ads? No."
+        ]
+      },
+      "acceptanceCriteria": [
+        "FAQ page contains all five FAQ items with the exact question/answer text.",
+        "FAQ items are formatted for easy scanning (e.g., accordion or clearly separated sections) while remaining accessible on mobile."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add a site-wide footer that appears on every page with links to Home, Features, About, Privacy, and FAQ; include copyright text “© 2026 FinPocket”; and include a contact email placeholder.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Footer:\n- Links: Home, Features, About, Privacy, FAQ\n- Copyright: © 2026 FinPocket\n- Contact email placeholder"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer is visible on all pages and contains working internal links to the 5 pages.",
+        "Footer includes the exact copyright string “© 2026 FinPocket”.",
+        "Footer includes a visible contact email placeholder (not a real email unless provided by the user)."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Apply the requested website style across all pages: clean, minimal, modern, professional startup-style layout; mobile-first responsive design; soft blue/green/white color theme; clean, modern fonts; fast loading.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Website Style:\n- Clean, minimal, modern design\n- Mobile-first and responsive\n- Professional startup-style layout\n- Soft colors (blue/green/white theme)\n- App landing page style\n\nAdditional Requirements:\n- Fast loading\n- Clean fonts"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Site uses a consistent visual system (colors, spacing, typography) aligned with a soft blue/green/white palette.",
+        "All pages meet basic performance expectations (no unnecessary heavy assets; images optimized).",
+        "Typography is clean and readable across mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Make the site SEO-friendly by using semantic HTML structure (headers, sections), per-page document titles, and appropriate meta descriptions matching each page’s content.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Additional Requirements:\n- SEO-friendly structure"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each page sets a distinct, relevant document title (e.g., “FinPocket — Privacy Policy”).",
+        "Each page includes a meta description relevant to its content.",
+        "Pages use semantic headings (H1 present and meaningful; sections structured logically)."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add the required static image assets (generated) to the frontend and render them in the UI: the hero app mockup placeholder image and a consistent set of simple feature icons.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "App mockup placeholder image in hero section",
+          "Explain all core features in detail with simple icons"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced directly by the frontend (not served through the backend).",
+        "Home hero displays the generated app mockup image.",
+        "Features page uses the generated icon set for the feature list with consistent sizing and styling."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or any files under frontend/src/components/ui (compose these components instead).",
+    "Backend must remain a single Motoko actor; only introduce backend code if strictly necessary for the marketing site (not expected for this request)."
+  ],
+  "nonGoals": [
+    "Implementing actual app download functionality or app store deep links (CTA should remain “Coming Soon” unless the user provides links).",
+    "Implementing user accounts, logins, cloud sync, analytics, tracking, ads, or any data collection.",
+    "Building the FinPocket mobile app itself (this request is for the marketing website only)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "FinPocket app mockup placeholder illustration (finpocket-mockup.dim_1200x900.png)",
+      "Simple line icon for “Quick income and expense entry” (icon-quick-entry.dim_256x256.png)",
+      "Simple line icon for “Custom categories” (icon-categories.dim_256x256.png)",
+      "Simple line icon for “Monthly dashboard and summaries” (icon-dashboard.dim_256x256.png)",
+      "Simple line icon for “Local device storage” (icon-local-storage.dim_256x256.png)",
+      "Simple line icon for “First-time guided walkthrough” (icon-walkthrough.dim_256x256.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods defined.",
+  "feature_evidence.json": "Feature evidence listing implemented features, related files, components, and confidence metadata.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose and functionality of each frontend file.",
+  "frontend/index.css": "Tailwind base stylesheet defining design tokens, OKLCH colors, dark mode overrides, and global styles.",
+  "frontend/index.html": "Root HTML document setting meta tags and loading the React entry script.",
+  "frontend/src/App.tsx": "Defines the TanStack Router routes and provides the router to the app using a shared SiteLayout.",
+  "frontend/src/components/Footer.tsx": "Footer displaying branding, navigation links, contact info, and a caffeine.ai attribution.",
+  "frontend/src/components/HeaderNav.tsx": "Responsive header with desktop and mobile navigation, active link styling, and a mobile menu toggle.",
+  "frontend/src/components/Seo.tsx": "SEO helper that sets the document title and meta description on mount.",
+  "frontend/src/components/SiteLayout.tsx": "Page wrapper providing header, footer, and main content via an Outlet.",
+  "frontend/src/hooks/useActor.ts": "Hook that creates and manages a backend actor based on the user's identity, refetching when identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context and hooks for managing Internet Identity login state, stored identities, and AuthClient creation.",
+  "frontend/src/index.css": "Configures Tailwind layers and defines light/dark theme CSS variables with base typography and utility classes.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and an Internet Identity provider.",
+  "frontend/src/pages/AboutPage.tsx": "Renders the About page with mission and values content plus SEO metadata.",
+  "frontend/src/pages/FaqPage.tsx": "Displays an FAQ list using accordions with SEO metadata and a contact section.",
+  "frontend/src/pages/FeaturesPage.tsx": "Shows a grid of feature cards with icons and descriptions along with SEO metadata.",
+  "frontend/src/pages/HomePage.tsx": "Home page presenting a hero section, feature highlights, and app preview with SEO setup.",
+  "frontend/src/pages/PrivacyPolicyPage.tsx": "Presents the privacy policy with principles, explanations, and SEO metadata.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending themes, colors, animations, and enabling plugins like typography and container queries.",
+  "project_state.json": "Defines project metadata and requirements for a mobile‑first marketing website for the FinPocket app, including design notes, needed images, and feature lists for multiple pages."
+}

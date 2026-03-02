@@ -1,0 +1,15 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with five routes (Home, Features, About, Privacy, FAQ) using a shared SiteLayout wrapper.",
+  "frontend/src/components/SiteLayout.tsx": "Layout wrapper component that provides consistent header navigation and footer across all pages using Outlet for route content.",
+  "frontend/src/components/HeaderNav.tsx": "Responsive header navigation component with mobile menu toggle, logo, and navigation links to all five pages with active state highlighting.",
+  "frontend/src/components/Footer.tsx": "Site-wide footer component with brand info, navigation links, contact email, copyright notice, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/Seo.tsx": "SEO helper component that dynamically sets document title and meta description for each page.",
+  "frontend/src/pages/HomePage.tsx": "Home page with seven sections: hero with mockup image and CTA, Why FinPocket features, Core Features list, How It Works steps, Privacy Highlight, Future Features, and final CTA.",
+  "frontend/src/pages/FeaturesPage.tsx": "Features page displaying all five core features with generated icons and detailed descriptions in a responsive grid layout.",
+  "frontend/src/pages/AboutPage.tsx": "About page presenting FinPocket's mission, values, and commitment to privacy and simplicity in managing personal finances.",
+  "frontend/src/pages/PrivacyPolicyPage.tsx": "Privacy Policy page listing the five privacy principles with clear formatting and explanation of FinPocket's privacy-first approach.",
+  "frontend/src/pages/FaqPage.tsx": "FAQ page with five common questions and answers displayed in an accessible accordion format with contact information.",
+  "frontend/src/index.css": "Global styles with OKLCH color system implementing a soft blue/green/white theme for both light and dark modes with custom design tokens.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Inter font family, custom color tokens, border radius, shadows, and animation settings for the design system.",
+  "frontend/index.html": "HTML entry point with proper meta tags, viewport settings, and base meta description for SEO."
+}
